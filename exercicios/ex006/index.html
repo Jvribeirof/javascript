@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #area{
+            background-color: lightgreen;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>DOM Parte 2</title>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById("area")
+        area.addEventListener('click',clicar)
+        area.addEventListener('mouseenter',entrar)
+        area.addEventListener('mouseout',sair)
+
+        function clicar(){
+            area.innerText = "Clicou!"
+            area.style.background = "red"
+        }
+
+        function entrar() {
+            area.innerText = "Entrou!"
+            area.style.background = "green"
+        }
+
+        function sair() {
+            area.innerText = "Saiu!"
+            area.style.background = "lightgreen"
+        }
+    </script>
+</body>
+</html>
