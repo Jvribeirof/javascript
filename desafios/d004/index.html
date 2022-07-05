@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+</head>
+<body>
+    <h1>Calculando Troco</h1>
+    <button id="btn">Comprar item</button>
+    <script>
+        btn.addEventLissener('click', clicar())
+        function clicar(){
+            var prod = window.prompt('Olá! Qual produto deseja comprar?')
+            var preco1 = window.prompt(`Quanto custa o(a) ${prod}?`)
+            var preco2 = window.prompt('Qual valor foi dado ao comprá-lo?')
+            var troco = preco2 - preco1
+            window.alert('Seu troco é de R$' + troco)
+        }
+    </script>
+</body>
+</html>

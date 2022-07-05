@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #bg{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(9, 0, 17);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form{
+            max-width: 500px;
+            margin: 12px;
+            padding: 32px 64px;
+            border-radius: 16px;
+
+            background-color: rgb(22, 7, 49);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #form > h1{
+            margin-bottom: 24px;
+        }
+
+        #nac{
+            margin-bottom: 12px;
+            height: 32px;
+            border-radius: 12px;
+            border: none;
+
+            background-color: rgb(42, 19, 85);
+            text-align: center;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        #btn{
+            margin-bottom: 12px;
+            height: 32px;
+            border-radius: 12px;
+            border: none;
+
+            background-color: rgb(0, 243, 182);
+            text-align: center;
+            color: black;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+
+        #btn:hover{
+            background-color: rgb(0, 230, 172);
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id="form">
+            <h1>Indique o seu país de origem</h1>
+            <input type="text" name="nac" id="nac">
+            <input type="button" value="Verificar" id="btn">
+            <div id="res"></div>
+        </div>
+    </div>
+    
+    <script>
+        btn.addEventListener('click', verificar)
+
+        function verificar(){
+            var txtnac = window.document.querySelector('#nac')
+            var res = window.document.querySelector('#res')
+            if(txtnac == 'Brasil'){
+                var nac = 'Brasileiro(a)'
+            } else{
+                var nac = 'Estrangeiro'
+            }
+            res.innerHTML = `<p>Você é um(a) <strong>${nac}</strong></p>`
+        }
+    </script>
+</body>
+</html>
