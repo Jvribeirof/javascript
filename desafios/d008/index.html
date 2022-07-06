@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08</title>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="clicar()">Desconto de 10%</button>
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var prod = window.prompt('Qual produto está comprando?')
+            var valor = window.prompt(`Qual é o valor do ${prod}?`)
+            var desc = valor -(valor*0.1)
+
+            var rest = window.document.querySelector('#res')
+            rest.innerHTML = `<h2>Calculando desconto de 10% para ${prod}</h2>`
+            rest.innerHTML +=`<p>Preço original é de R$ ${valor}</p>`
+            rest.innerHTML += `<p>O valor com desconto é de <strong>R$ ${desc}</strong></p>` 
+        }
+    </script>
+</body>
+</html>

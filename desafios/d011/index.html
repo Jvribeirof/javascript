@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11</title>
+</head>
+<body>
+    <h1>Anos Bissextos</h1>
+    <button onclick="clicar()">Verificar</button>
+
+    <div id="res">
+        <p>
+            Informe em ano para saberse ele é bissexto
+        </p>
+    </div>
+
+    <script>
+        function clicar(){
+            var ano = window.prompt('Qual ano?')
+            var rest = window.document.querySelector('#res')
+            switch(ano%4){
+                case 0:
+                    rest.innerHTML += '<p>bissexto</p>'
+                    break
+                default:
+                    rest.innerHTML += '<p>não bissexto</p>'
+                    break
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>

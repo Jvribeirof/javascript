@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 13</title>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    <button onclick="clicar()">Entrar com notas</button>
+    <div id="res">
+        <p>
+            Clique no botão para informar as notas do aluno.
+        </p>
+    </div>
+
+    <script>
+        function clicar(){
+            var rest = window.document.querySelector('#res')
+
+            var n1 = Number(window.prompt('Nota da avaliação 1'))
+            var n2 = Number(window.prompt('Nota da avaliação 2'))
+            var n3 = Number(window.prompt('Nota da avaliação 3'))
+
+            var med = (n1+n2+n3)/3
+
+            rest.innerHTML = `<p>Sua média foi ${med}</p>`
+
+            if(med >= 6){
+                rest.innerHTML += '<p>Aprovado</p>'
+            } else {
+                if ( med >=3){
+                    rest.innerHTML += '<p>Recuperação</p>'
+                } else{
+                    rest.innerHTML += '<p>Reprovado</p>'
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>

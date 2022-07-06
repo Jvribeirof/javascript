@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button id="btn">Reajustar salário</button>
+    <div id="res"></div>
+    <script>
+        var btn1 = window.document.querySelector('#btn')
+        btn1.addEventListener('click',clicar)
+        function clicar(){
+            var nome = window.prompt('Qual o seu nome?')
+            var sal = Number(window.prompt('Qual é o seu salário atual?'))
+            var porcent = Number(window.prompt('Qual é o seu aumento em procentagem(%)?'))
+            var poraux = Number(porcent/100)
+            var aumnt = Number(sal*poraux)
+            var salnew = sal+aumnt
+
+
+            var rest = window.document.querySelector('#res')
+
+            rest.innerHTML = `<h2>${nome} recebeu um aumento salarial!</h2>`
+            rest.innerHTML += `<p>Seu salalário é de R$ ${sal}</p>`
+            rest.innerHTML += `<p>Com o aumento de ${porcent}%, o salário deve aumentar R$ ${aumnt} no próximo mês</p>`
+            rest.innerHTML += `<p>A partir daí, seu salário será de R$ ${salnew}.</p>`
+        }
+    </script>
+</body>
+</html>
