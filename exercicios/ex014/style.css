@@ -19,6 +19,21 @@ main{
     box-shadow: 8px 8px 0px black;
 }
 
+div#horario{
+    text-align: center;
+    margin: 16px auto;
+}
+
+div#img{
+    background: blue url('imagens/dia.jpg') center center;
+    background-size: cover;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: 16px auto;
+}
+
 footer{
     color: white;
     text-align: center;
