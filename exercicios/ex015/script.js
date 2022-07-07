@@ -25,6 +25,8 @@ function clicar(){
         } else {
             var epoca = 'idoso(a)'
         }
-    }
-        res.innerHTML = `Detectei ${genero} ${epoca} de ${idade} anos` 
+
+        res.style.padding = 
+        res.innerHTML = `Detectei: ${genero} ${epoca} de ${idade} anos`
+    } 
 }
