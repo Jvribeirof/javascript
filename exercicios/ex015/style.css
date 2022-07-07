@@ -1,0 +1,51 @@
+@charset "UFT-8";
+
+body{
+    background-color: rgb(108, 108, 226);
+    font: normal 1em 'Roboto';
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin: auto;
+    width: 500px;
+    box-shadow: 8px 8px 0px black;
+}
+
+#sexo-inpt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 16px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 4px 4px 0px black;
+    
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+    button:hover{
+        box-shadow: 2px 2px 0px black;
+    }
+
+    #res{
+        margin-top: 24px;
+    }
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

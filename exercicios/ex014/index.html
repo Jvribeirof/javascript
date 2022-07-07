@@ -7,37 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Modelo de exercício</title>
 </head>
-<body>
+<body onload="load()">
     <header>
-        <h1 id="h1">Título</h1>
+        <h1 id="h1">Horário do dia</h1>
     </header>
     <main>
         <div id="horario">
             Horário
         </div>
 
-        <div id="img"></div>
+        <div id="imagem">
+            <img id="imghtml" src="imagens/dia.jpg" alt="dia">
+        </div>
     </main>
     <footer>
         <p>&copy; Eu mesmo</p>
     </footer>
-
-    <script>
-        var agora = new Date()
-        var hora = agora.getHours()
-        var min = agora.getMinutes()
-
-        if(hora < 12){
-            var aux = 'Dia'
-        } else {
-            if(hora < 18){
-                var aux = 'Tarde'
-                
-            } else{
-                var aux = 'Noite'
-            }
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

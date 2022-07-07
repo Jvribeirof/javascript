@@ -1,7 +1,7 @@
 @charset "UFT-8";
 
 body{
-    background-color: rgb(108, 108, 226);
+    background-color: rgb(110, 108, 226);
     font: normal 1em 'Roboto';
 }
 
@@ -24,14 +24,17 @@ div#horario{
     margin: 16px auto;
 }
 
-div#img{
-    background: blue url('imagens/dia.jpg') center center;
+img{
     background-size: cover;
-
+    background-position: center center;
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    margin: 16px auto;
+}
+
+div#imagem{
+    display: flex;
+    justify-content: center;
 }
 
 footer{
