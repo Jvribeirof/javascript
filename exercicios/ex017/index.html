@@ -9,19 +9,36 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar</h1>
     </header>
     <main>
         <div>
+            <div id="p1">
+                <p>Inicio:</p>
+                <input type="number" name="start" id="inicio">
+            </div>
+            
+            <div id="p2">
+                <p>Fim:</p>
+                <input type="number" name="end" id="fim">
+            </div>
+            
+            <div id="p3">
+                <p>Passo:</p>
+                <input type="number" name="pss" id="passo">
+            </div>
 
+            <button onclick="clicar()">Calcular</button>
         </div>
 
-        <div>
-
+        <div id="res">
+            Preencha os itens para proceguir
         </div>
     </main>
     <footer>
         <p>&copy; Eu mesmo</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
