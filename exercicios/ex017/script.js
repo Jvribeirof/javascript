@@ -16,7 +16,7 @@ function clicar(){
         var i2 = Number(i.value)
         var cont = ''
     
-        if(i2>=f2){//positivo
+        if(i2<=f2){//positivo
             for(var n = i2;n <= f2;n += p2){
                 cont += " " + n
             }
