@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modelo</title>
+</head>
+<body>
+    <header>
+        <h1>Modelo</h1>
+    </header>
+    <main>
+            <div id="int">
+                <label for="reg">Número entre 1 e 100:</label>
+                
+                <input type="number" name="reg" id="inpt">
+
+                <button onclick="adicionar()">Adicionar</button>
+
+                <div>
+                    <select name="tabu" id="tab" size="6"></select>
+                </div>
+
+                <button onclick="finalizar()">Finalizar</button>
+
+                <div id="res"></div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; Eu mesmo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
