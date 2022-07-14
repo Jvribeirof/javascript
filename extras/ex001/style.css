@@ -54,7 +54,6 @@ button{
     box-shadow: 2px 2px 0px black;
     
     font-weight: 700;
-    text-transform: uppercase;
 }
 
     button:hover{
