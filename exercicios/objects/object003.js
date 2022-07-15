@@ -1,15 +1,15 @@
 var usuarios = [
     {
-        nome: 'joao'
-        idade: '19'
+        nome: 'joao',
+        idade: '19',
     },
     {
-        nome: 'pedro'
-        idade: '20'
+        nome: 'pedro',
+        idade: '20',
     },
     {
-        nome: 'bruna'
-        idade: '18'
+        nome: 'bruna',
+        idade: '18',
     },
 
 ];
