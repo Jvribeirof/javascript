@@ -13,7 +13,7 @@
 
     <button ondblclick="duploClick()">Clique aqui</button>
 
-    <input onkeypress="somar()" type="text" id="inpt">
+    <input onkeypress="somar()" onblur="teste()" type="text" id="inpt">
 
     <div id="res"></div>
 
@@ -27,7 +27,11 @@
 
         function duploClick(){
             teclas = 0
-            input.innerHTML = ''
+            input.innerHTML = 'Olá'
+        }
+
+        function teste(){
+            console.log('Saiu')
         }
     </script>
 </body>
