@@ -49,18 +49,27 @@
     </div>
 
     <script>
-        function iniciar(){
-            document.querySelector('#tempo').innerHTML = 'Começou a contar';
-            
-            tempo = setTimeout(function(){
-                document.querySelector('#tempo').innerHTML = 'Acabou a contagem!';
-            }, 5000);
-            
-        }
+        var soma =''
+        var n = 450
+        function iniciar(){  
+            if(soma == n){
+                document.querySelector('#tempo').innerHTML = 0
+            }
+            tempo = setInterval(function(){
+            var cronometro = document.querySelector('#tempo').innerHTML;
+            soma = parseInt(cronometro) + 1;
+
+            if(soma == n){
+                parar()
+            }
+
+            document.querySelector('#tempo').innerHTML = soma;
+        }, 10);
+        }      
+        
 
         function parar(){
-            clearTimeout(tempo);
-            document.querySelector('#tempo').innerHTML = 'Parou a contagem!'
+            clearInterval(tempo);
         }
     </script>
 </body>
