@@ -7,7 +7,7 @@
     <title>teste</title>
 </head>
 <body>
-    <input type="number" id="inpt">
+    <input type="number" name="teste" id="testando">
     <button onclick="adicionar()">Adicionar</button>
     <br>
     <button onclick="calcular()">Calcular</button>
@@ -16,27 +16,53 @@
 
     <script>
         var rest = document.querySelector('#res')
-        var txtInpts = document.querySelector('#inpt')
-        var vInpts = Number(txtInpts.value)
-
+        let inptNumber = document.querySelector('#testando')
+ 
         let notas = [];
-        let med = '';
-        let qntNotas = ''
+        let med = 0;
 
+        let acimaMedia = [];
+        let naMedia = [];
+        let abaixoMedia = [];
+        
         //nota>=7 aprovado
         //nota>=4 recuperação
         //nota<4 reprovado
 
         function adicionar(){
-            notas.push(vInpts)
-            console.log(txtInpts)
-        }
+            notas.push(inptNumber.value*1)
+            console.log(notas)
+            inptNumber.value = ''
+        };
 
         function calcular(){
-            for(let i = 0; i <= vInpts.length; i++){
-                console.log(i)
+            for(let i = 0; i < notas.length; i++){
+                med += notas[i]
+                if(notas[i]>7){
+                    //acima da média
+                    acimaMedia.push(notas[i])
+                } else if(notas[i]==7){
+                    //na média
+                    naMedia.push(notas[i])
+                } else {
+                    //abaixo da média
+                    abaixoMedia.push(notas[i])
+                }
             }
-        }
+            med /= notas.length
+            if(med>=7){
+                console.log('aprovado com média de ' + med)
+            } else if(med>=4){
+                console.log('recuperação com média de ' + med)
+            } else {
+                console.log('reprovado com média de ' + med)
+            }
+
+            console.log('Notas acima da média: ' + acimaMedia)
+            console.log('Notas na média: ' + naMedia)
+            console.log('Notas abaixo da média: ' + abaixoMedia)
+
+        };
     </script>
 </body>
 </html>
