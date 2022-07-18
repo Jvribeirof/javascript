@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Tempo</title>
+    <style>
+        #template{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #btn{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        button{
+            background-color: rgb(223, 242, 242);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+
+            padding:16px 24px;
+
+            font-size: 1.25em;
+        }
+
+        button:hover{
+            background-color: rgb(210, 226, 226);
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="template">
+        <h1>Controle de Tempo</h1>
+        <h2 id="tempo">0</h2>
+        <div id="btn">
+            <button onclick="iniciar()" id="start">Start</button>
+            <button onclick="parar()" id="stop">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        function iniciar(){
+            document.querySelector('#tempo').innerHTML = 'Começou a contar';
+            
+            tempo = setTimeout(function(){
+                document.querySelector('#tempo').innerHTML = 'Acabou a contagem!';
+            }, 5000);
+            
+        }
+
+        function parar(){
+            clearTimeout(tempo);
+            document.querySelector('#tempo').innerHTML = 'Parou a contagem!'
+        }
+    </script>
+</body>
+</html>
