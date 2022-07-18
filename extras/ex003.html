@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <input type="number" id="inpt">
+    <button onclick="adicionar()">Adicionar</button>
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    <div id="res"></div>
+
+    <script>
+        var rest = document.querySelector('#res')
+        var txtInpts = document.querySelector('#inpt')
+        var vInpts = Number(txtInpts.value)
+
+        let notas = [];
+        let med = '';
+        let qntNotas = ''
+
+        //nota>=7 aprovado
+        //nota>=4 recuperação
+        //nota<4 reprovado
+
+        function adicionar(){
+            notas.push(vInpts)
+            console.log(txtInpts)
+        }
+
+        function calcular(){
+            for(let i = 0; i <= vInpts.length; i++){
+                console.log(i)
+            }
+        }
+    </script>
+</body>
+</html>
