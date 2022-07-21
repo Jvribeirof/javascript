@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'roboto',sans-serif;
+    background-color: azure;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.task{
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+button{
+    background-color: rgb(120, 238, 198);
+}
+
+    button:hover{
+        transition: .1s;
+        background-color: rgb(117, 224, 188);
+    }
+
+input{
+    width: 400px;
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
+
+    max-width: 542px;
+
+    margin: auto auto;
+    /*border: 1px solid black;*/
+    padding-top: 40px;
+}
+
+.item{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 52px;
+
+    background: white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.item-icone{
+    flex: 20%;
+    /*border: 1px solid red;*/
+    text-align: center;
+    font-size: 1.5rem;
+}
+.item-text{
+    flex: 50%;
+    /*border: 1px solid rgb(0, 255, 47);*/
+    font-size: 1.25rem;
+}
+.item-btn{
+    flex: 25%;
+    /*border: 1px solid rgb(89, 0, 255);*/
+}
+.delete{
+    background-color: rgb(235, 104, 104);
+    color: white;
+
+    width: 100%;
+    height: 52px;
+
+    padding: 12px;
+    border: none;
+
+    font-size: 1rem;
+}
+
+.delete:hover{
+    transition: .1s;
+    background-color: rgb(207, 84, 84);
+}
+
+.mdi-check-circle{
+    color: green;
+}
+
+.item.clicado{
+    background-color: whitesmoke;
+}
+
+.item.clicado .item-text{
+    text-decoration: line-through;
+    color: rgb(151, 151, 151);
+}

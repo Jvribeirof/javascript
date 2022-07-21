@@ -1,0 +1,50 @@
+let contador = 0
+let input = document.querySelector('#inpt')
+let btnAdd = document.querySelector('#btnadd');
+let main = document.querySelector('#main-tasks')
+
+function deletar(num){
+    var tarefa = document.getElementById(num);
+    tarefa.remove();
+}
+
+function marcarItem(num){
+
+}
+
+function addTarefa(){
+    //PEGAR VALOR DIGITADO NO INPUT
+    let valorInput = input.value
+
+    if((input.value !=="") && (input.value !== null) && (input.value !== undefined)){
+
+        contador++;
+
+        let novoItem = `<div id="${contador}" class="item">
+        <div onclick="marcarItem()" class="item-icone">
+            <i class="mdi mdi-checkbox-blank-circle-outline"></i>
+        </div>
+
+        <div class="item-text">
+            ${valorInput}
+        </div>
+
+        <div class="item-btn">
+            <button onclick="deletar(${contador})" class="delete">
+                <i class="mdi mdi-delete"></i>
+                Deletar
+            </button>
+        </div>
+    </div>`;
+
+    main.innerHTML += novoItem;
+    }
+    input.value = "";
+    input.focus();
+}
+
+input.addEventListener("keyup", function(event){
+    if(event.keyCode === 13){
+
+    }
+})
