@@ -8,5 +8,9 @@ function selecionarFiltro(id){
         btn.classList.remove('active')
     }
 
-    var teste = document.getElementsByClassName('item');
+    let teste = document.querySelectorAll('.item.f-video-games');
+
+
+    teste.innerHTML = ""
+
 }
