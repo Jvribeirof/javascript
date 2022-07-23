@@ -1,16 +1,22 @@
-function selecionarFiltro(id){
-    let btn = document.getElementById(id)
-    let classe = btn.getAttribute('class')
+let list = document.querySelectorAll('.filter');
+let itens = document.querySelectorAll('.item');
 
-    if(classe == 'filter'){
-        btn.classList.add('active')
-    }else{
-        btn.classList.remove('active')
-    }
+for(let i = 0; i < list.length; i++){
+    list[i].addEventListener('click',function(){
+        for(let j = 0; j < list.length; j++){
+            list[j].classList.remove('active');
+        }
+        list[i].classList.add('active');
+        let dataFilter = list[i].getAttribute('data-filter')
 
-    let teste = document.querySelectorAll('.item.f-video-games');
+        for(let k = 0; k < itens.length; k++){
+            itens[k].classList.remove('item-active');
+            itens[k].classList.add('item-hide');
 
-
-    teste.innerHTML = ""
-
+            if(itens[k].getAttribute(data-item) == dataFilter || itens[k].getAttribute(data-item) == "todos"){
+                itens[k].classList.remove('item-hide');
+                itens[k].classList.add('item-active');
+            }
+        }
+    })
 }

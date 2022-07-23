@@ -94,3 +94,10 @@ h1{
     background-color: lightcoral;
 }
 
+.item-hide{
+    display: none;
+}
+
+.item-active{
+    display: flex;
+}
