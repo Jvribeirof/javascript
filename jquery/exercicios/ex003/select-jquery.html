@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores do JQuery no computador</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Aspernatur, maiores impedit totam, dignissimos, qui doloribus molestias sint dicta optio inventore beatae laborum iure unde consequatur ducimus mollitia. Molestias!
+    </p>
+
+    <p id="por-id">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Aspernatur, maiores impedit totam, dignissimos, qui doloribus molestias sint dicta optio inventore beatae laborum iure unde consequatur ducimus mollitia. Molestias!
+    </p>
+
+    <p class="por-class">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Aspernatur, maiores impedit totam, dignissimos, qui doloribus molestias sint dicta optio inventore beatae laborum iure unde consequatur ducimus mollitia. Molestias!
+
+    </p>
+
+    <p class="class1 class2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Aspernatur, maiores impedit totam, dignissimos, qui doloribus molestias sint dicta optio inventore beatae laborum iure unde consequatur ducimus mollitia. Molestias!
+
+    </p>
+
+    <div id="por-id">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Aspernatur, maiores impedit totam, dignissimos, qui doloribus molestias sint dicta optio inventore beatae laborum iure unde consequatur ducimus mollitia. Molestias!
+    </div>
+
+
+
+    <script src="../../jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('p').html('Inserido por Tag no jQuery')
+            $('#por-id').html('Inserido por id no jQuery')
+            $('.por-class').html('Inserido por class no jQuery')
+            $('.class1.class2').html('Inserido por dupla classe no jQuery')
+            $('div#por-id').html('Inserido por id dentro de uma div no jQuery')
+        });
+    </script>
+</body>
+</html>
