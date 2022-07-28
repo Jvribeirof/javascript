@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no JQuery</title>
+</head>
+<body>
+    <button id="btn">Clique aqui</button>
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            //CLIQUE
+            $('#btn').click(function(){
+                $(this).html('Mudei quando fui clicado!');
+            });
+
+            //DUPLO CLIQUE
+            $('#btn').dblclick(function(){
+                $(this).hide();
+                $(document).ready(function(){
+                    alert('Atenção, você apagou o botão');
+                });
+            });
+
+            //HOVER
+            $('#btn').hover(function(){
+                $('#btn').html('Acionou o Hover')
+            },
+                function(){
+                    $('#btn').html('Desacionou o Hover')
+                });
+        });
+    </script>
+</body>
+</html>
