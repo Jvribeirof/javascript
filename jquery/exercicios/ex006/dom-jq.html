@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do DOM</title>
+    <style>
+        main{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <main>
+        <div class="quadrado red"></div>
+    </main>
+    <button id="change">Mudar</button>
+    <button id="add">Adicionar</button>
+
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#change').click(function(){
+                $('.quadrado').toggleClass('red')
+            })
+            $('#add').click(function(){
+                $('main').append('<div class="quadrado red"></div>')
+            })
+        });
+    </script>
+</body>
+</html>
