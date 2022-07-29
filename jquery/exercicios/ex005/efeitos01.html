@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos e Animações</title>
+    <style>
+        h1{text-align: center;}
+        main{display: flex;flex-direction: column;justify-content: center;align-items: center; gap: 40px;}
+        .quad{width: 100px;height: 100px;}
+        #squares{display: flex;gap: 10px;}
+        .red{background: red;}
+        .blue{background: blue; }
+        .green{background: rgb(47, 255, 47);}
+    </style>
+</head>
+<body>
+    <h1>Testando o JQuery</h1>
+    <main>
+        <div id="squares">
+            <div class="quad green"></div>
+            <div class="quad blue"></div>
+            <div class="quad red"></div>
+        </div>
+        <div>
+            <button id="btn-toggle">Mostrar</button>
+        </div>
+    </main>
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            let clicado = $('.quad')
+            let quadrado
+
+            for(let i = 0; i < clicado.length; i++){
+                $(clicado[i]).click(function(){
+                    quadrado = this
+                })
+            }
+
+            $('#btn-toggle').click(function(){
+                $(quadrado).toggle(1000);
+            })
+        })
+    </script>
+</body>
+</html>
