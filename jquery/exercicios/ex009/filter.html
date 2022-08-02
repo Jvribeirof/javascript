@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Filter</title>
+    <style>
+        *{
+            font-family: 'roboto', sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inpt">
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+            <tr>
+                <td>João Vitor</td>
+                <td>Ribeiro</td>
+                <td>jvribeirof@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Gabriel</td>
+                <td>Moreira</td>
+                <td>moreira.cavalcante@outlook.com</td>
+            </tr>
+            <tr>
+                <td>Julia</td>
+                <td>Fischer</td>
+                <td>jupescadora@gmail.com</td>
+            </tr>
+            <tr>
+                <td>João Arthur</td>
+                <td>Vitorino</td>
+                <td>xoxones@hotmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            let tab = $('#tabela tr');
+            $('#inpt').on('keyup', function(){
+                let busca = $(this).val().toLowerCase();
+
+                $(tab).filter(function(){
+                    $(this).toggle(
+                       $(this).text().toLocaleLowerCase().indexOf(busca) > -1
+                    )
+                });
+            })
+        })
+    </script>
+</body>
+</html>
