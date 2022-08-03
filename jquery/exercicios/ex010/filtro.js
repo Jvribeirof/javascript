@@ -14,20 +14,17 @@ $(document).ready(function(){
             }
 
             //SELECIONAR ITENS
-            let dataFilter = $(list[i]).attr('data-filter');
+            let dataFilter = $(list[i])
 
-            //REMOVE TODOS OS ITENS DA TELA
-            //$(itens).hide();
-
-            /*$(itens).filter(function(){
-                $(this).toggle()
-            });*/
-
-            //RE-ADICIONA APENAS OS QUE SÃO DO FILTRO
-            for(let k = 0; k < itens.length; k++){
-                if($(itens[k]).attr('data-item') == dataFilter || dataFilter == 'todos'){
-                    $(itens[k]).show();
-                }
+            var id = $(dataFilter).attr('id');
+            if(id == 'todos'){
+                $(itens).show();
+            } else{
+                //if(SE ALGUM FILTRO ESTIVER SELECIONADO, PULAR O IF){
+                    $(itens).hide();
+                    //$(itens).css('display') == 'none'
+                //}
+                $(itens).filter('.f-'+id).toggle();
             }
         })
     }
