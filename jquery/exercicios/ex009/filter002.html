@@ -9,14 +9,14 @@
 <body>
     <button>teste</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
-    <p class="filtro-teste filtro-teste2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
+    <p class="filtro-teste">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
+    <p class="filtro-teste2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
 
     <script src="../../jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
             $('button').click(function(){
-                let classe = $('.filtro-teste').attr('class')
+                let classe = $('p').attr('class')
                 console.log(classe)
                 $("p").filter('.'+classe).toggle()
             })
