@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método Filter</title>
+    <style>
+        .filtro-teste{
+            background-color: aquamarine;
+        }
+
+        .filtro-teste2{
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
-    <button>teste</button>
+    <button id="ft1">ft1</button>
+    <button id="ft2">ft2</button>
+
+    <button id="btn-teste">teste</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
     <p class="filtro-teste">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
     <p class="filtro-teste2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laboriosam reprehenderit eveniet doloribus, vitae sapiente, ipsa quod debitis rem facere cupiditate necessitatibus veniam ratione eum consequuntur! Esse molestias tempora quaerat?</p>
@@ -15,10 +27,21 @@
     <script src="../../jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
+            let classes = []
+            
+            $('#ft1').click(function(){
+                classes[0]='filtro-teste'
+                console.log(classes)
+            })
+            $('#ft2').click(function(){
+                classes[4]='filtro-teste2'
+                console.log(classes)
+            })
             $('button').click(function(){
-                let classe = $('p').attr('class')
-                console.log(classe)
-                $("p").filter('.'+classe).toggle()
+                $("p").hide();
+                for(let i = 0; i < classes.length; i++){
+                    $("p").filter('.' + classes[i]).show()
+                }
             })
         });
     </script>
