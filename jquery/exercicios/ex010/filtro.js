@@ -22,7 +22,7 @@ $(document).ready(function(){
             } else{
                 //if(SE ALGUM FILTRO ESTIVER SELECIONADO, PULAR O IF){
                     $(itens).hide();
-                    //$(itens).css('display') == 'none'
+                    //$(itens).css('display') != 'none'
                 //}
                 $(itens).filter('.f-'+id).toggle();
             }
