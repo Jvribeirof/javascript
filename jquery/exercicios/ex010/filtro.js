@@ -20,6 +20,17 @@ $(document).ready(function(){
                 $(list[0]).removeClass('active');
                 $(list[i]).toggleClass('active');
                 vet[i] = $(list[i]).attr('data-filter');
+
+                if($(list[i]).attr('class') == 'filter active'){
+                    cont++
+                } else {
+                    cont--
+                }
+                console.log(cont)
+                if(cont == 0){
+                    $(list).removeClass('active');
+                    $(list[0]).addClass('active');
+                }
             }
 
             console.log(vet)
@@ -37,10 +48,6 @@ $(document).ready(function(){
                 for(let j = 0; j < vet.length; j++){
                     $(itens).filter('.f-'+vet[j]).toggle();
                 }
-                for(let k = 1; k < list.length; k++){
-                   vet2[k] = verificar(list[k])
-                }
-                console.log(vet2)
             }
         })
     }
