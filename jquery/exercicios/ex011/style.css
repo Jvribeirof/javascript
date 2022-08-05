@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+*{
+    font-family: 'roboto', sans-serif;
+}
+
+#quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+}
+h1{
+    text-align: center;
+}
+
+#respostas{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resposta{
+    width: 80%;
+    margin: auto;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 100px;
+}
+
+    .resposta:hover{
+        background-color: rgb(214, 214, 214);
+        cursor: pointer;
+    }
+
+.confirm{
+    width: 80%;
+    margin: auto;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: aquamarine;
+}
+
+    .confirm:hover{
+        background-color: rgb(112, 222, 185);
+        cursor: pointer;
+    }
+
+.selecionada{
+   background-color: rgb(139, 242, 242); 
+}
