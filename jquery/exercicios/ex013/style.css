@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'roboto';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    gap: 30px;
+    padding-top: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+header.filter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    /*border: 1px solid black;*/
+}
+
+div.filter{
+    transition: .5s;
+    background-color: whitesmoke;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 1.5em;
+}
+    div.filter:hover{
+        transition: .2s;
+        background-color: rgb(225, 224, 224);
+        cursor: pointer;
+    }
+div.filter.active{
+    transition: .2s;
+    background-color: rgb(71, 236, 192);
+}
+    div.filter.active:hover{
+        transition: .2s;
+        background-color: rgb(66, 207, 169);
+    }
+#main-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 15px;
+
+    max-width: 850px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.item.f-videoGames{
+    background-color: lightseagreen;
+}
+.item.f-esportes{
+    background-color: lightgoldenrodyellow;
+}
+.item.f-animes{
+    background-color: lightpink;
+}
+.item.f-livros{
+    background-color: lightcoral;
+}
