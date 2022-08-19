@@ -8,15 +8,24 @@
 </head>
 <style>
     body{
-        width:600px;
+        max-width:800px;
         font-size: 1.5em;
+    }
+
+    div{
+        opacity: 0;
+    }
+
+    .fade{
+        animation: fade 1s forwards
     }
     @keyframes fade {
         0%{
-            
+            transform: translate3d(0px, 20px, 0px);
         }
         100%{
-
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
         }
     }
 </style>
@@ -37,12 +46,41 @@
 
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
 
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, repudiandae. Commodi impedit doloribus a odio voluptatum culpa eligendi quae temporibus nostrum ducimus delectus exercitationem hic, ad iure eaque, aperiam pariatur!
+    <div id="n1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, repudiandae. Commodi impedit doloribus a odio voluptatum culpa eligendi quae temporibus nostrum ducimus delectus exercitationem hic, ad iure eaque, aperiam pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corporis necessitatibus nesciunt temporibus corrupti maiores possimus nulla, voluptate officiis asperiores ducimus dolores commodi veritatis ipsam eos ex suscipit odio assumenda.
     </div>
 
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, repudiandae. Commodi impedit doloribus a odio voluptatum culpa eligendi quae temporibus nostrum ducimus delectus exercitationem hic, ad iure eaque, aperiam pariatur!
-    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae voluptatibus neque repudiandae libero, consectetur porro, minima laborum nisi beatae eum corporis at cumque perferendis aperiam ad qui maxime. Autem.</p>
+    
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+
+        //FUNÇÃO DA ANIMAÇÃO
+        function fadeScroll(select){
+            let scrlTop = $(document).scrollTop();
+            let offset = $(window).height() * 3/4
+            let itemTop = select.offset().top;
+
+            if(scrlTop >= itemTop - offset){
+                select.addClass('fade')
+            }
+        }
+        
+        //RODA AO DER RE-LOAD NA PÁGINA
+        fadeScroll($('div'))
+
+        //RODA AO SCROLLAR A PÁGINA
+        $(document).scroll(function(){
+            fadeScroll($('div'));
+        })
+    </script>
 </body>
 </html>
