@@ -4,7 +4,7 @@
     var txth = window.document.querySelector('#horario')
     var img = window.document.querySelector('#imghtml')
 
-    var hora = 11
+    var hora = 23
     function load() {
         if(hora < 12){
             txth.innerHTML  = `Agora são <strong>${hora}h</strong>, bom dia!`
